@@ -7,8 +7,7 @@
     <br><br>
 </h1>
 
-<p>Welcome to JAW Lab, a mod offering a variety of useful laboratory blocks: code doors, key doors and keycard with network connections.</p>
-<p>Also, mod adds many decoration blocks and some interactable items.</p>
+<p>A library focused on RTS structures mechanics</p>
 <p>&nbsp;</p>
 <p align="center"><a href="https://github.com/classicAkk/RTStrucutres-Framework/issues"><img src="https://i.imgur.com/qPmjSXy.png" width="160" /></a> <a href="https://discord.gg/HkwSrBhKU3"><img src="https://i.imgur.com/uf6V9ZX.png" width="160" /></a> </p>
 
