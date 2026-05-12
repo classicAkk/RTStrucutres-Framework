@@ -51,21 +51,15 @@ Supported build modes:
 
 ## Gradle (NeoForge)
 
-### repositories
-
 ```gradle
 repositories {
     maven {
-        url = "https://your-maven-url"
+        url = "https://api.modrinth.com/maven"
     }
 }
-```
 
-### dependencies
-
-```gradle
 dependencies {
-    implementation fg.deobf("net.awyvrix:structure-framework:1.0.0")
+    implementation "maven.modrinth:rtstrucures-framework:0.1.3"
 }
 ```
 
