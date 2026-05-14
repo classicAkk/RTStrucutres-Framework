@@ -3,7 +3,6 @@ package net.awyvrix.rtstructures.content.commands.impl;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.ArgumentBuilder;
 import net.awyvrix.rtstructures.api.*;
-import net.awyvrix.rtstructures.content.commands.ExecuteMode;
 import net.awyvrix.rtstructures.content.commands.CommandUtils;
 import net.awyvrix.rtstructures.content.commands.StructureSuggestions;
 import net.awyvrix.rtstructures.content.structureTool.*;
@@ -25,18 +24,11 @@ public class ExecLoadCommand {
                         .suggests(StructureSuggestions::structures)
                         .then(argument("anchor", StringArgumentType.word())
                                 .suggests((ctx, builder) ->
-                                        StructureSuggestions.enumValues(
-                                                PlacementAnchor.class,
-                                                builder
-                                        )
+                                        StructureSuggestions.enumValues(PlacementAnchor.class, builder)
                                 )
-
                                 .then(argument("mode", StringArgumentType.word())
                                         .suggests((ctx, builder) ->
-                                                StructureSuggestions.enumValues(
-                                                        ExecuteMode.class,
-                                                        builder
-                                                )
+                                                StructureSuggestions.enumValues(BuildType.class, builder)
                                         )
                                         .executes(ctx -> {
                                             String filename = StringArgumentType.getString(ctx, "filename");
@@ -53,27 +45,10 @@ public class ExecLoadCommand {
                                             StructureTemplate template = StructureCache.get(worldDir, filename);
                                             PlacementAnchor anchorMode = PlacementAnchor.CUSTOM;
 
-                                            StructureInstance instance =
-                                                    new StructureInstance(
-                                                            level,
-                                                            template,
-                                                            anchorPos,
-                                                            anchorMode
-                                                    );
+                                            StructureInstance instance = new StructureInstance(level, template, anchorPos, anchorMode);
                                             StructureManager.add(instance);
 
-                                            if (modeName.equals("INSTANT")) {
-                                                StructureLoadTool.executeLoad(
-                                                        level,
-                                                        worldDir,
-                                                        CommandsState.filename,
-                                                        StructureToolState.placeAnchor,
-                                                        CommandsState.anchor
-                                                );
-                                            } else {
-                                                instance.build(BuildType.valueOf(modeName), 2.0f);
-                                            }
-
+                                            instance.build(BuildType.valueOf(modeName), 0.5f);
                                             CommandUtils.success(ctx, "Successfully loaded structure: " + filename);
                                             CommandUtils.success(ctx, "Executing structure: " + filename);
 

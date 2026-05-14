@@ -1,4 +1,4 @@
-<p align="center"><img src="./src/main/resources/assets/RTStructures.png" alt="Logo" width="250"></p>
+<p align="center"><img src="./src/main/resources/assets/rtstructures.png" alt="Logo" width="250"></p>
 <h1 align="center">RTStructures Framework  <br>
 	<a href="https://github.com/classicAkk/RTStrucutres-Framework"><img src="https://img.shields.io/github/stars/classicAkk/RTStrucutres-Framework?label=Stars&style=flat&logo=github" alt="Github"></a>
 	<a href="https://discord.gg/bRv4rvpNtJ"><img src="https://img.shields.io/discord/1100722019491917834?color=5865F2&label=Discord&style=flat" alt="Discord"></a>

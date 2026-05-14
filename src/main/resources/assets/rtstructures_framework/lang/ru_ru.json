@@ -1,7 +1,0 @@
-{
-  "item.rtstructures_framework.structure_tool": "Структурный инструмент",
-  "tooltip.rtstructures_framework.structure_tool.shift_down": "Shift для подробной информации",
-  "tooltip.rtstructures_framework.structure_tool.no_data": "Координаты не указаны",
-  "key.structure_tool.expand_mode": "Режим расширения",
-  "key.categories.rtstructures": "RTStructures Framework"
-}

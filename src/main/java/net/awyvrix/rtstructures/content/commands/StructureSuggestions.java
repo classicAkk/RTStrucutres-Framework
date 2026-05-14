@@ -22,7 +22,6 @@ public class StructureSuggestions {
         try {
             if (Files.exists(dir)) {
                 try (Stream<Path> stream = Files.list(dir)) {
-
                     stream.filter(path -> path.toString().endsWith(".rtstructure"))
                             .map(path -> path.getFileName().toString())
                             .map(name -> name.replace(".rtstructure", ""))
