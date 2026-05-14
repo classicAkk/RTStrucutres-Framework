@@ -23,6 +23,7 @@ public class RTStructuresCommands {
                         .then(ExecuteCommand.register())
                         .then(ExecLoadCommand.register())
                         .then(ToggleBoxesCommand.register())
+                        .then(DebugCommand.register())
         );
     }
 }

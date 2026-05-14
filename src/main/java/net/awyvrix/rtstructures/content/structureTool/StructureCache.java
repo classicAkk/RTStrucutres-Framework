@@ -1,6 +1,10 @@
 package net.awyvrix.rtstructures.content.structureTool;
 
+import net.awyvrix.rtstructures.content.worldData.StructureFileIndex;
+import net.awyvrix.rtstructures.content.worldData.StructurePaths;
+import net.awyvrix.rtstructures.core.StructureDeserializer;
 import net.awyvrix.rtstructures.core.StructureLoader;
+import net.awyvrix.rtstructures.core.StructureSerializer;
 import net.awyvrix.rtstructures.core.StructureTemplate;
 
 import java.nio.file.Path;
@@ -18,6 +22,25 @@ public final class StructureCache {
                 throw new RuntimeException(e);
             }
         });
+    }
+
+    public static StructureTemplate load(Path worldDir, String id) {
+        return CACHE.computeIfAbsent(id, k -> loadFromDisk(worldDir, k));
+    }
+
+    public static void preloadAll(Path worldDir) {
+        for (String id : StructureFileIndex.getAllIds(worldDir)) {
+            CACHE.put(id, loadFromDisk(worldDir, id));
+        }
+    }
+
+    private static StructureTemplate loadFromDisk(Path worldDir, String id) {
+        try {
+            Path path = StructurePaths.getPath(worldDir, id);
+            return StructureDeserializer.load(path);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to load structure: " + id, e);
+        }
     }
 
     public static void clear() {
