@@ -1,9 +1,9 @@
 <p align="center"><img src="./src/main/resources/assets/RTStructures.png" alt="Logo" width="250"></p>
 <h1 align="center">RTStructures Framework  <br>
-	<a href="https://r.createmod.net/p"><img src="https://img.shields.io/github/stars/classicAkk/RTStrucutres-Framework?label=Stars&style=flat&logo=github" alt="Github"></a>
+	<a href="https://github.com/classicAkk/RTStrucutres-Framework"><img src="https://img.shields.io/github/stars/classicAkk/RTStrucutres-Framework?label=Stars&style=flat&logo=github" alt="Github"></a>
 	<a href="https://discord.gg/bRv4rvpNtJ"><img src="https://img.shields.io/discord/1100722019491917834?color=5865F2&label=Discord&style=flat" alt="Discord"></a>
-	<a href="https://r.createmod.net/cf"><img src="https://img.shields.io/curseforge/dt/{ID}?logo=curseforge&label=&suffix=%20&style=flat&color=242629&labelColor=F16436&logoColor=1C1C1C" alt="CurseForge"></a>
-    <a href="https://modrinth.com/mod/rtstrucure-framework"><img src="https://img.shields.io/modrinth/dt/rtstrucures-framework?logo=modrinth&label=&suffix=%20&style=flat&color=242629&labelColor=5CA424&logoColor=1C1C1C" alt="Modrinth"></a>
+	<a href="https://www.curseforge.com/minecraft/mc-mods/rtstructures-framework"><img src="https://img.shields.io/curseforge/dt/1538918?logo=curseforge&label=&suffix=%20&style=flat&color=242629&labelColor=F16436&logoColor=1C1C1C" alt="CurseForge"></a>
+    <a href="https://modrinth.com/mod/rtstrucures-framework"><img src="https://img.shields.io/modrinth/dt/rtstrucures-framework?logo=modrinth&label=&suffix=%20&style=flat&color=242629&labelColor=5CA424&logoColor=1C1C1C" alt="Modrinth"></a>
     <br><br>
 </h1>
 
