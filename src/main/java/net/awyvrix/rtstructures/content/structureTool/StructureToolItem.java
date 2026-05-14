@@ -43,7 +43,7 @@ public class StructureToolItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         if(!Screen.hasShiftDown()) {
-            tooltipComponents.add(Component.translatable("tooltip.structure_framework.structure_tool.shift_down")
+            tooltipComponents.add(Component.translatable("tooltip.rtstructures.structure_tool.shift_down")
                     .withStyle(ChatFormatting.GREEN));
         } else {
             tooltipComponents.add(displayCoordinatesTooltip(StructureToolState.pos1, "Pos1: "));
@@ -102,7 +102,9 @@ public class StructureToolItem extends Item {
     }
 
     public static Component displayCoordinatesTooltip(BlockPos pos, String text) {
-        if (pos == null) return Component.literal(text + Component.translatable("tooltip.structure_framework.structure_tool.no_data")).withStyle(ChatFormatting.RED);
+        if (pos == null) {return Component.literal(text).withStyle(ChatFormatting.GOLD)
+                    .append(Component.translatable("tooltip.rtstructures.structure_tool.no_data").withStyle(ChatFormatting.RED));
+        }
         return Component.literal(text).withStyle(ChatFormatting.GOLD)
                 .append(Component.literal("X: ").withStyle(ChatFormatting.RED))
                 .append(Component.literal(String.valueOf(pos.getX())).withStyle(ChatFormatting.RED))

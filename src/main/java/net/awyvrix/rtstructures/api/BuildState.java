@@ -4,5 +4,6 @@ public enum BuildState {
     IDLE,
     DAMAGED,
     BUILDING,
-    COMPLETED
+    COMPLETED,
+    DEMOLISHED
 }

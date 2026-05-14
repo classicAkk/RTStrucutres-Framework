@@ -1,0 +1,7 @@
+{
+  "item.rtstructures.structure_tool": "Structure Tool",
+  "tooltip.rtstructures.structure_tool.shift_down": "Press shift key for details",
+  "tooltip.rtstructures.structure_tool.no_data": "No coordinates provided",
+  "key.rtstructures.structure_tool.expand_mode": "Expand Mode",
+  "key.categories.rtstructures": "RTStructures Framework"
+}

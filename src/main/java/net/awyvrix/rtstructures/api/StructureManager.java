@@ -1,5 +1,6 @@
 package net.awyvrix.rtstructures.api;
 
+import net.awyvrix.rtstructures.content.worldData.StructureWorldData;
 import net.minecraft.server.level.ServerLevel;
 
 import java.util.Collection;
@@ -9,6 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public final class StructureManager {
     private static final Map<UUID, StructureInstance> INSTANCES = new ConcurrentHashMap<>();
+    private static int autosaveTicker = 0;
 
     private StructureManager() {}
 
@@ -21,6 +23,8 @@ public final class StructureManager {
     }
 
     public static void remove(StructureInstance instance) {
+        if (instance == null) return;
+        instance.destroy();
         INSTANCES.remove(instance.getId());
     }
 
@@ -33,10 +37,15 @@ public final class StructureManager {
     }
 
     public static void tick(ServerLevel level) {
-
         for (StructureInstance instance : INSTANCES.values()) {
             if (instance.getLevel() != level) continue;
             instance.tick(level);
+        }
+        autosaveTicker++;
+
+        if (autosaveTicker >= 100) {
+            autosaveTicker = 0;
+            StructureWorldData.get(level).syncFromManager();
         }
     }
 }

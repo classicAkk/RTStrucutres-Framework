@@ -4,5 +4,8 @@ public enum BuildType {
     FAST,
     FAST_SAFE,
     CONNECT,
-    SEPARATED
+    SEPARATED,
+    SEPARATED_DIAGONAL,
+    INSTANT,
+    DEMOLISH
 }

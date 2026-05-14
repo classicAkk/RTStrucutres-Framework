@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "rtstructures_framework:item/structure_tool"
+    "layer0": "rtstructures:item/structure_tool"
   }
 }

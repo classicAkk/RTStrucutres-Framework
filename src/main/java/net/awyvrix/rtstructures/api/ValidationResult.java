@@ -30,7 +30,6 @@ public final class ValidationResult {
     }
 
     public float damagedPercent() {
-
         return 100f - completionPercent();
     }
 
@@ -40,5 +39,17 @@ public final class ValidationResult {
 
     public boolean isDamaged() {
         return matchedBlocks != totalBlocks;
+    }
+
+    public boolean isDamaged(int damageThreshold) {
+        return matchedBlocks <= damageThreshold;
+    }
+
+    public boolean isDestroyed() {
+        return matchedBlocks == 0;
+    }
+
+    public boolean isDestroyed(int destroyThreshold) {
+        return matchedBlocks <= destroyThreshold;
     }
 }
