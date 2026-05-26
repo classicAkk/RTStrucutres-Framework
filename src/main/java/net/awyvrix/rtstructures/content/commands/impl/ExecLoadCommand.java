@@ -5,7 +5,7 @@ import com.mojang.brigadier.builder.ArgumentBuilder;
 import net.awyvrix.rtstructures.api.*;
 import net.awyvrix.rtstructures.content.commands.CommandUtils;
 import net.awyvrix.rtstructures.content.commands.StructureSuggestions;
-import net.awyvrix.rtstructures.content.structureTool.*;
+import net.awyvrix.rtstructures.content.tools.structureTool.*;
 import net.awyvrix.rtstructures.core.StructureTemplate;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.core.BlockPos;

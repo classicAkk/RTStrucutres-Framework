@@ -1,6 +1,6 @@
 package net.awyvrix.rtstructures.api;
 
-import net.awyvrix.rtstructures.content.structureTool.PlacementAnchor;
+import net.awyvrix.rtstructures.content.tools.structureTool.PlacementAnchor;
 import net.awyvrix.rtstructures.content.worldData.StructureWorldData;
 import net.awyvrix.rtstructures.core.BlockEntry;
 import net.awyvrix.rtstructures.core.StructureTemplate;

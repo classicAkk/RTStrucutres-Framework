@@ -1,0 +1,5 @@
+{
+  "category": "power",
+  "display_name": "socket.low_voltage_power",
+  "icon": "rtstructures:textures/gui/socket/low_voltage_power.png"
+}

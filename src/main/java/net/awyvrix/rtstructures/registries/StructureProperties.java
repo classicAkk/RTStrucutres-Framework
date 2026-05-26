@@ -1,8 +1,7 @@
 package net.awyvrix.rtstructures.registries;
 
 import net.awyvrix.rtstructures.api.BuildType;
-import net.awyvrix.rtstructures.content.example.SimpleHouseStructure;
-import net.awyvrix.rtstructures.content.structureTool.PlacementAnchor;
+import net.awyvrix.rtstructures.content.tools.structureTool.PlacementAnchor;
 
 public class StructureProperties {
     private String path;

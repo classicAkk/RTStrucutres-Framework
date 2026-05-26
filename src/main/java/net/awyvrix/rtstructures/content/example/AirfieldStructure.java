@@ -1,9 +1,9 @@
 package net.awyvrix.rtstructures.content.example;
 
-import net.awyvrix.rtstructures.RTStructureFramework;
+import net.awyvrix.rtstructures.RTStructuresFramework;
 import net.awyvrix.rtstructures.api.BuildType;
 import net.awyvrix.rtstructures.api.StructureInstance;
-import net.awyvrix.rtstructures.content.structureTool.PlacementAnchor;
+import net.awyvrix.rtstructures.content.tools.structureTool.PlacementAnchor;
 import net.awyvrix.rtstructures.registries.StructureProperties;
 import net.awyvrix.rtstructures.registries.StructureType;
 
@@ -12,7 +12,7 @@ public class AirfieldStructure extends StructureType {
 
     public AirfieldStructure() {
         super("airfield", StructureProperties.create()
-                .modPath("basic/airfield", RTStructureFramework.MOD_ID)
+                .modPath("basic/airfield", RTStructuresFramework.MOD_ID)
                 .defaultAnchor(PlacementAnchor.CENTER)
                 .defaultBuildType(BuildType.FAST)
 
