@@ -2,11 +2,9 @@ package net.awyvrix.rtstructures.content.worldData;
 
 import net.awyvrix.rtstructures.api.BuildState;
 import net.awyvrix.rtstructures.api.StructureInstance;
-import net.awyvrix.rtstructures.content.structureTool.PlacementAnchor;
+import net.awyvrix.rtstructures.content.tools.structureTool.PlacementAnchor;
 import net.awyvrix.rtstructures.registries.StructureType;
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.level.Level;
 
 import java.util.BitSet;
 import java.util.UUID;

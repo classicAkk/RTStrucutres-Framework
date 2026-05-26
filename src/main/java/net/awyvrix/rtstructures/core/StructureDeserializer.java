@@ -20,6 +20,7 @@ public final class StructureDeserializer {
                 throw new IOException("Invalid format");
             }
 
+            // Version
             int version = in.readInt();
             if (version != 2) {
                 throw new IOException("Unsupported version: " + version);
@@ -66,7 +67,7 @@ public final class StructureDeserializer {
                 az = in.readShort();
             }
 
-            StructureMetadata metadata = new StructureMetadata(hasAnchor, ax, ay, az);
+            StructureMetadata metadata = new StructureMetadata(hasAnchor, false, ax, ay, az, null, null, null);
             return new StructureTemplate(
                     sizeX, sizeY, sizeZ,
                     blockPalette,

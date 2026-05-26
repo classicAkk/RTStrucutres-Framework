@@ -1,0 +1,5 @@
+{
+  "category": "power",
+  "display_name": "socket.thermal_power",
+  "icon": "rtstructures:textures/gui/socket/thermal_power.png"
+}

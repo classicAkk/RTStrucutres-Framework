@@ -1,5 +1,8 @@
 package net.awyvrix.rtstructures.core;
 
+import net.awyvrix.rtstructures.content.tools.linkTool.SocketPoint;
+import net.awyvrix.rtstructures.content.tools.linkTool.ContactPoint;
+import net.awyvrix.rtstructures.content.tools.linkTool.StructureNode;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
@@ -10,10 +13,15 @@ import java.util.List;
 
 public final class StructureCapture {
     public static StructureTemplate capture(Level level, BlockPos a, BlockPos b) {
-        return capture(level, a, b, null);
+        return capture(level, a, b, null, null, null, null);
     }
 
-    public static StructureTemplate capture(Level level, BlockPos a, BlockPos b, @Nullable BlockPos customAnchor) {
+    public static StructureTemplate capture(Level level,
+                                            BlockPos a, BlockPos b, @Nullable BlockPos customAnchor,
+                                            List<StructureNode> nodes, List<SocketPoint> connectPoints, List<ContactPoint> contactPoints
+                                            ) {
+        boolean isLinkable = nodes != null && connectPoints != null && contactPoints != null;
+
         int minX = Math.min(a.getX(), b.getX());
         int minY = Math.min(a.getY(), b.getY());
         int minZ = Math.min(a.getZ(), b.getZ());
@@ -51,18 +59,14 @@ public final class StructureCapture {
             short anchorY = (short)(customAnchor.getY() - minY);
             short anchorZ = (short)(customAnchor.getZ() - minZ);
 
-            metadata = new StructureMetadata(true, anchorX, anchorY, anchorZ);
+            metadata = new StructureMetadata(true, isLinkable, anchorX, anchorY, anchorZ, nodes, connectPoints, contactPoints);
         } else {
-            metadata = new StructureMetadata(false, (short)0, (short)0, (short)0);
+            metadata = new StructureMetadata(false, isLinkable, (short)0, (short)0, (short)0, nodes, connectPoints, contactPoints);
         }
 
         return new StructureTemplate(
-                sizeX,
-                sizeY,
-                sizeZ,
-                palette,
-                blocks.toArray(new BlockEntry[0]),
-                metadata
+                sizeX, sizeY, sizeZ,
+                palette, blocks.toArray(new BlockEntry[0]), metadata
         );
     }
 }

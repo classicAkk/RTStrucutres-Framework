@@ -5,10 +5,10 @@ import com.mojang.brigadier.builder.ArgumentBuilder;
 import net.awyvrix.rtstructures.content.commands.AnchorResolver;
 import net.awyvrix.rtstructures.content.commands.CommandUtils;
 import net.awyvrix.rtstructures.content.commands.StructureSuggestions;
-import net.awyvrix.rtstructures.content.renderer.StructureToolRenderer;
-import net.awyvrix.rtstructures.content.structureTool.CommandsState;
-import net.awyvrix.rtstructures.content.structureTool.PlacementAnchor;
-import net.awyvrix.rtstructures.content.structureTool.StructureCache;
+import net.awyvrix.rtstructures.content.tools.structureTool.CommandsState;
+import net.awyvrix.rtstructures.content.tools.structureTool.PlacementAnchor;
+import net.awyvrix.rtstructures.content.tools.structureTool.StructureCache;
+import net.awyvrix.rtstructures.content.tools.structureTool.StructureToolState;
 import net.awyvrix.rtstructures.core.StructureTemplate;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.core.BlockPos;
@@ -43,13 +43,10 @@ public class LoadCommand {
                                     StructureTemplate template = StructureCache.get(worldDir, filename);
                                     BlockPos anchorOffset = AnchorResolver.getAnchorOffset(template, anchor);
 
-                                    StructureToolRenderer.clearPreviewBox();
-                                    StructureToolRenderer.setPreviewBox(
-                                            anchorOffset,
-                                            template.sizeX,
-                                            template.sizeY,
-                                            template.sizeZ
-                                    );
+                                    StructureToolState.loadPos = anchorOffset;
+                                    StructureToolState.sizeX = template.sizeX;
+                                    StructureToolState.sizeY = template.sizeY;
+                                    StructureToolState.sizeZ = template.sizeZ;
 
                                     CommandUtils.success(ctx, "Successfully loaded structure: " + filename);
 

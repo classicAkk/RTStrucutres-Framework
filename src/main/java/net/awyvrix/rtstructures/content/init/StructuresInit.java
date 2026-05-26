@@ -1,6 +1,6 @@
 package net.awyvrix.rtstructures.content.init;
 
-import net.awyvrix.rtstructures.RTStructureFramework;
+import net.awyvrix.rtstructures.RTStructuresFramework;
 import net.awyvrix.rtstructures.content.example.AirfieldStructure;
 import net.awyvrix.rtstructures.content.example.CrystalStructure;
 import net.awyvrix.rtstructures.content.example.ProtectedStructure;
@@ -16,7 +16,7 @@ public final class StructuresInit {
     private StructuresInit() {}
 
     public static final DeferredRegister<StructureType> STRUCTURES =
-            DeferredRegister.create(RTSRegistries.STRUCTURES, RTStructureFramework.MOD_ID);
+            DeferredRegister.create(RTSRegistries.STRUCTURES, RTStructuresFramework.MOD_ID);
 
 
     public static final Supplier<StructureType> SIMPLE_HOUSE = STRUCTURES.register("simple_house", SimpleHouseStructure::new);

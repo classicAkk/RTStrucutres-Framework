@@ -1,11 +1,11 @@
 package net.awyvrix.rtstructures.content.worldData;
 
-import net.awyvrix.rtstructures.RTStructureFramework;
+import net.awyvrix.rtstructures.RTStructuresFramework;
 import net.awyvrix.rtstructures.api.BuildState;
 import net.awyvrix.rtstructures.api.StructureInstance;
 import net.awyvrix.rtstructures.api.StructureManager;
-import net.awyvrix.rtstructures.content.structureTool.PlacementAnchor;
-import net.awyvrix.rtstructures.content.structureTool.StructureCache;
+import net.awyvrix.rtstructures.content.tools.structureTool.PlacementAnchor;
+import net.awyvrix.rtstructures.content.tools.structureTool.StructureCache;
 import net.awyvrix.rtstructures.core.StructureTemplate;
 import net.awyvrix.rtstructures.registries.StructureType;
 import net.minecraft.core.BlockPos;
@@ -17,7 +17,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.storage.LevelResource;
 
-import java.util.BitSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -71,14 +70,14 @@ public final class StructureWorldData extends SavedData {
             list.add(t);
         }
 
-        tag.put(RTStructureFramework.MOD_ID, list);
+        tag.put(RTStructuresFramework.MOD_ID, list);
         return tag;
     }
 
     public static StructureWorldData load(CompoundTag tag, HolderLookup.Provider provider) {
         StructureWorldData data = new StructureWorldData();
 
-        ListTag list = tag.getList(RTStructureFramework.MOD_ID, Tag.TAG_COMPOUND);
+        ListTag list = tag.getList(RTStructuresFramework.MOD_ID, Tag.TAG_COMPOUND);
 
         for (Tag raw : list) {
             CompoundTag t = (CompoundTag) raw;

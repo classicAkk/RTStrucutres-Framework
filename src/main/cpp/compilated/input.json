@@ -1,0 +1,9 @@
+{
+  "power": [
+    "high_voltage_power",
+    "low_voltage_power"
+  ],
+  "fluid": [
+    "water_input"
+  ]
+}

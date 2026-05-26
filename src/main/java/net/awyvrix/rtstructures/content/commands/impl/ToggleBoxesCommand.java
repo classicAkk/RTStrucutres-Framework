@@ -2,7 +2,7 @@ package net.awyvrix.rtstructures.content.commands.impl;
 
 import com.mojang.brigadier.arguments.BoolArgumentType;
 import com.mojang.brigadier.builder.ArgumentBuilder;
-import net.awyvrix.rtstructures.content.structureTool.CommandsState;
+import net.awyvrix.rtstructures.content.tools.structureTool.CommandsState;
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.network.chat.Component;

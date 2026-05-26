@@ -1,8 +1,8 @@
 package net.awyvrix.rtstructures.registries;
 
 import net.awyvrix.rtstructures.api.StructureInstance;
-import net.awyvrix.rtstructures.content.structureTool.PlacementAnchor;
-import net.awyvrix.rtstructures.content.structureTool.StructureCache;
+import net.awyvrix.rtstructures.content.tools.structureTool.PlacementAnchor;
+import net.awyvrix.rtstructures.content.tools.structureTool.StructureCache;
 import net.awyvrix.rtstructures.core.StructureTemplate;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

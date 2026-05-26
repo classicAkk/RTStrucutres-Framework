@@ -1,7 +1,7 @@
 package net.awyvrix.rtstructures.content.commands;
 
-import net.awyvrix.rtstructures.content.structureTool.PlacementAnchor;
-import net.awyvrix.rtstructures.content.structureTool.StructureToolState;
+import net.awyvrix.rtstructures.content.tools.structureTool.PlacementAnchor;
+import net.awyvrix.rtstructures.content.tools.structureTool.StructureToolState;
 import net.awyvrix.rtstructures.core.StructureMetadata;
 import net.awyvrix.rtstructures.core.StructureTemplate;
 import net.minecraft.core.BlockPos;

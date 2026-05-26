@@ -1,0 +1,5 @@
+{
+  "category": "signal",
+  "display_name": "socket.satellite_signal",
+  "icon": "rtstructures:textures/gui/socket/satellite_signal.png"
+}

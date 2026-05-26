@@ -6,7 +6,7 @@ import net.awyvrix.rtstructures.api.StructureInstance;
 import net.awyvrix.rtstructures.api.StructureManager;
 import net.awyvrix.rtstructures.content.commands.StructureSuggestions;
 import net.awyvrix.rtstructures.content.init.StructuresInit;
-import net.awyvrix.rtstructures.content.structureTool.*;
+import net.awyvrix.rtstructures.content.tools.structureTool.*;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

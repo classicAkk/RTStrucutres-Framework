@@ -1,6 +1,6 @@
 package net.awyvrix.rtstructures.content.example;
 
-import net.awyvrix.rtstructures.RTStructureFramework;
+import net.awyvrix.rtstructures.RTStructuresFramework;
 import net.awyvrix.rtstructures.api.BuildType;
 import net.awyvrix.rtstructures.api.StructureInstance;
 import net.awyvrix.rtstructures.registries.StructureProperties;
@@ -10,7 +10,7 @@ public class ProtectedStructure extends StructureType {
 
     public ProtectedStructure() {
         super("protected_structure", StructureProperties.create()
-                .modPath("protected_structure", RTStructureFramework.MOD_ID)
+                .modPath("protected_structure", RTStructuresFramework.MOD_ID)
 
                 .defaultBuildType(BuildType.FAST_SAFE)
                 .defaultBuildSpeed(5f)
